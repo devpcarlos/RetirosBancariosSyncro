@@ -1,3 +1,7 @@
+import java.util.stream.Stream;
+
+import static java.util.Arrays.stream;
+
 public class MovimientoBancario {
 
 
@@ -27,11 +31,11 @@ public class MovimientoBancario {
 
     public synchronized void retiro(final int amount){
         if (balance>=amount){
-            System.out.println("Retiro exitoso de: " + amount);
+            System.out.println(getName()+" "+ "retiro exitoso de: " + amount);
             balance = balance - amount;
             System.out.println("Saldo restante es de: " + balance);
         }else {
-            System.out.println("Saldo insuficiente");
+            System.out.println(getName()+" "+"saldo insuficiente");
         }
 
     }
